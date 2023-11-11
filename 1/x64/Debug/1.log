@@ -1,0 +1,7 @@
+﻿  main.cpp
+C:\Users\vigne\Desktop\AERSP 424\HW 2\1\1\main.cpp(128,5): error C2059: syntax error: 'while'
+C:\Users\vigne\Desktop\AERSP 424\HW 2\1\1\main.cpp(128,18): error C2143: syntax error: missing ';' before '{'
+C:\Users\vigne\Desktop\AERSP 424\HW 2\1\1\main.cpp(128,18): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\vigne\Desktop\AERSP 424\HW 2\1\1\main.cpp(137,5): error C2059: syntax error: 'return'
+C:\Users\vigne\Desktop\AERSP 424\HW 2\1\1\main.cpp(138,2): error C2059: syntax error: '}'
+C:\Users\vigne\Desktop\AERSP 424\HW 2\1\1\main.cpp(138,2): error C2143: syntax error: missing ';' before '}'
