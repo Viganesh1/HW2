@@ -14,7 +14,7 @@ class GeneralAviation;
 class ATC;
 
 // Question 1
-struct Flight {
+struct Flight { // container storing information of the airport distances from statecollege
     string destination;
     int distance;
     Flight(const string& dest, int dist) : destination(dest), distance(dist) {}
@@ -34,7 +34,7 @@ int main() {
     return 0;
 }
 // Question 2
-class Plane {
+class Plane { // class named Plane
 protected:
     double wait_time;
 
@@ -64,7 +64,7 @@ public:
 };
 
 // Question 3
-Plane::Plane(string from, string to) {
+Plane::Plane(string from, string to) { //origin and destination
     origin = from;
     destination = to;
     distance = 0.0;
@@ -87,7 +87,7 @@ void Plane::operate(double dt) {
 }
 
 // Question 4
-class Airliner : public Plane {
+class Airliner : public Plane { //Airliner Class
 private:
     string Airline;
 
@@ -105,7 +105,7 @@ public:
     }
 };
 
-class GeneralAviation : public Plane {
+class GeneralAviation : public Plane { // General Aviation Class
 public:
     GeneralAviation(string from, string to);
     ~GeneralAviation();
@@ -120,7 +120,7 @@ public:
 };
 
 // Question 6
-class ATC {
+class ATC { //ATC Class
 private:
     vector<Plane*> registered_planes;
     int MAX_LANDED_PLANE_NUM = 2;
@@ -132,17 +132,19 @@ public:
     void register_plane(Plane* plane);
     void control_traffic();
 };
-
-    // Question 7
-    double dt = 100;
+char AA5915, & UA5236, & UA4465, & AA6240, & GeneralAviationA, & GeneralAviationB, & GeneralAviationC;
+    // Question 7 
+    double dt = 100; //timestep
+    int main(){
     while (true) {
-        vector<Plane*> planes = { &AA5915, &UA5236, &UA4465, &AA6240, &GeneralAviationA, &GeneralAviationB, &GeneralAviationC };
+        vector<Plane*> planes = { AA5915, UA5236, UA4465, AA6240, GeneralAviationA, GeneralAviationB, GeneralAviationC };
 
         for (auto& plane : planes) {
             plane->operate(dt);
-            atc.control_traffic();
+            ATC control_traffic();
         }
     }
 
     return 0;
  }
+   
